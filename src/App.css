@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:focus,
+:active {
+  outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Outfit', 'Roboto', 'Oxygen';
+}
+
+p {
+  font-size: 1.7rem;
+}
+
+h1 {
+  font-size: 5.5rem;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: aliceblue;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main .search {
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top {
+  flex: 1 0 auto;
+}
+
+.main input {
+  padding: 0.6rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(250, 250, 250, 0.6);
+  background: rgba(250, 250, 250, 0.3);
+  color: azure;
+}
+
+::placeholder {
+  color: beige;
+}
+
+.main::before {
+  content: '';
+  background: url('https://source.unsplash.com/1600x900/?nature') no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  max-width: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main .top {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+
+.description {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(250, 250, 250, 0.2);
+  margin-top: 30vh;
+  margin-bottom: 5vh;
+  width: 50%;
+}
+
+.bold {
+  font-weight: 700;
 }
